@@ -11,3 +11,42 @@ This repository contains both the Arduino project that is required for the ESP32
 > There are currently three app inventor files: `slider1.aia`, `slider2.aia` and `hack-week-car.aia`. `slider1.aia` and `slider2.aia` attempt to implement multi-touch sliders for speed and steering control, but are still in alpha-stages of development.
 
 [event]: https://www.mint-labs-regensburg.de/course/10059/hack-week-sponsored-by-bmw.html
+
+## App Inventor - How to get started?
+
+MIT App Inventor is an intuitive, visual programming environment that allows everyone to build fully functional apps for Android phones, iPhones, and Android/iOS tablets in less than 30 minutes. We used the tool to control the car via a tablet. 
+
+1. Go to the MIT App Inventor - use the link below to log in without an account: 
+
+    http://code.appinventor.mit.edu/
+
+    ![App Inventor](/img/AppInventor-0.png)
+
+
+2. When logging in, a return code will be displayed for the user - make sure to copy and save the return code in a safe place, because projects created cannot be retrieved without the code, after you log out once:
+
+    ![App Inventor](/img/AppInventor-1.png)
+
+
+3. Create a new project and import the .aia files from the GitHub repsitory:
+
+    ![App Inventor](/img/AppInventor-2.png)
+
+    ![App Inventor](/img/AppInventor-3.png)
+
+4. Connect to an Android Tablet or Phone, click *Connect - AI Companion* and scan the appeared QR code with your device:
+
+    ![App Inventor](/img/AppInventor-4.png)
+
+    ![App Inventor](/img/AppInventor-5.png)
+
+    Now you are connected to the project via your device and can steer the car as well as preview the changes you do in your project. If you close the window on your device your connection to your project will be lost. If you lose the connection, repeat the steps to generate a new QR code and connect again.
+
+5. If you log out and want to continue the next day, use your initial code to login again:
+
+    ![App Inventor](/img/AppInventor-6.png)
+
+
+
+
+
