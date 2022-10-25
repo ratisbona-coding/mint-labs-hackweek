@@ -12,6 +12,43 @@ This repository contains both the Arduino project that is required for the ESP32
 
 [event]: https://www.mint-labs-regensburg.de/course/10059/hack-week-sponsored-by-bmw.html
 
+## ESP32 Pinout
+
+![L298 Pin Diagram](/img/ESP32-pinout-mapping.png)
+
+[Source](https://microcontrollerslab.com/esp32-pinout-use-gpio-pins/)
+
+## L298 Motor Driver
+
+The L298 Motor Driver is a controller that uses an H-Bridge to easily control the direction and speed of up to 2 DC motors.
+
+![L298 Pin Diagram](/img/l298_modul_pinout.jpg)
+
+**Driver Board Pinout**
+
+The L298 motor controller has a total of fourteen (14) pins, each with a different function. All 14 connectors are listed in the table below along with the pin number.
+
+**L-298 motor driver board connectors**
+
+| Pin No.  | Name | Function |
+| ------------- | ------------- | ------------- |
+| 1	| OUT 1	| Stepper Motor A+ or DC Motor 1 (+) |
+| 2	| OUT 2	| Stepper Motor A or DC Motor 1 (-) |
+| 3	| 12V jumpers	| Allows 5V power supply on board |
+| 4	| 12v	| power supply |
+| 5	| Ground (GND)	| Ground (0V) |
+| 6	| 5 v	| power supply |
+| 7	| ENA	| Switch on DC motor 1 |
+| 8th	| IN 1	| Input from Arduino |
+| 9	| IN 2	| Input from Arduino |
+| 10	| IN 3	| Input from Arduino |
+| 11	| IN 4	| Input from Arduino |
+| 12	| ENB	| Switch on DC motor 2 |
+| 13	| OUT 3	| Stepper Motor B+ or DC Motor 2 (+) |
+| 14	| OUT 4	| Stepper motor B or DC motor 2 (-) |
+
+[Source](https://www.e-hack.de/l298-dualer-vollbruckentreiber-funktion-schaltung/)
+
 ## App Inventor - How to get started?
 
 MIT App Inventor is an intuitive, visual programming environment that allows everyone to build fully functional apps for Android phones, iPhones, and Android/iOS tablets in less than 30 minutes. We used the tool to control the car via a tablet. 
