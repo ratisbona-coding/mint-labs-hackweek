@@ -2,9 +2,9 @@
 
 ## Dokumentation Todo:
 
-- [] Deutsch
-- [] Bilder
-- [] Hardware setup
+* [ ] Deutsch
+* [ ] Bilder
+* [ ] Hardware setup
 
 ## Hardware Setup
 
