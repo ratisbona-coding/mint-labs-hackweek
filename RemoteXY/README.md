@@ -1,40 +1,18 @@
 # Bluetooth BLE Fernsteuerung mit RemoteXY
 
-## Dokumentation Todo:
-
-* [ ] Deutsch
-* [ ] Bilder
-* [ ] Hardware setup
-
-## Hardware Setup
-
 ## Installation
 
-### Arduino Studio 1.8.19
+### RemoteXY Bibliothek im Arduino IDE
 
-Hier herunterladen https://downloads.arduino.cc/arduino-1.8.19-windows.exe und installieren.
+Wir müssen zusätzlich die RemoteXY Bibliothek im Arduino IDE installieren (https://remotexy.com/en/library/)
 
-### ESP32 Board
-Dann müssen wir die board library für das ESP32 board installieren:
+* `Sketch > Include Library > Manage Libraries` suche nach `RemoteXY` und installiere diese.
 
-* `File->Preferences->Additional Board Manager Urls`: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json eintragen
-* `Tools->Board->Board Manager` suchen nach ESP32 und installieren
+### RemoteXY App auf dem Android Endgerät installieren
 
-### RemoteXY Bibliothek
-Dann müssen wir die RemoteXY Bibliothek installieren (https://remotexy.com/en/library/)
+Hier ist der [Link](https://remotexy.com/en/download/) zu der App.
 
-* `Sketch->Include Library->Manage Libraries` suche nach `RemoteXY` und dann installieren.
-
-### ESPServo Bibliothek
-
-* `Sketch->Include Library->Manage Libraries` suche nach `esp32Servo` und dann installieren (nicht esp32servo360).
-![ESP Servo](doc/esp32servo.png "ESP Servo")
-
-### RemoteXY App installieren
-
-Die App gibt es hier https://remotexy.com/en/download/
-
-Bis fünf GUI Elemente ist die APP kostenlos. Mehr als 5 kosten dann ca 8€.
+Bis fünf GUI Elemente ist die APP kostenlos. Mehr als 5 kosten dann ~8€.
 
 Okay, cool. Soweit sind wir bereit, jetzt können wir starten.
 
@@ -42,19 +20,47 @@ Okay, cool. Soweit sind wir bereit, jetzt können wir starten.
 
 ### GUI mit RemoteXY erstellen
 
-Hier ist der Editor: https://remotexy.com/en/editor/
+1. Folge diesem [Link](https://remotexy.com/en/editor/) und klicke oben recht kannst du auf `Editor`.
 
-Configuration: 
-* Connection: Bluetooth
-* Board: ESP32based board
-* Module: Bluetooth on Board
-* IDE: Arduino IDE
+    <img src="doc/remotexy0.png" width="850" height="180">
 
-Dann ziehen wir einen Joystick in die GUI. Bitte den Haken bei `automatically center` anklicken. Er heißt dann `joystick_1`
+2. Rechts bei `Properties` öffne `Configuration`: 
 
-Vergebt rechts noch einen Namen für euer Auto unter `Bluetooth name`
+    <img src="doc/remotexy1.png" width="850">
 
-Jetzt können wir mit `Get Code` den Quellcode holen. Er wird unten dargestellt. Wir können im offenen Arduino Studio den Text einfach in eine neue Datei kopieren.
+    Wähle eins der Elemente an und es wird ein Pop-up erscheinen. Wähle die Verbindung, Board und Modul wie unten aufgelistet und bestätige deine Auswahl:
+
+      * Connection: Bluetooth
+      * Board: ESP32 based board
+      * Module: Bluetooth on chip
+      * IDE: Arduino IDE
+    
+    <br />
+    <img src="doc/remotexy2.png" width="600">
+
+3. Auf der linken Seite bei `Elements` klappe `Controls` auf und ziehe einen Joystick in die GUI. 
+
+    <img src="doc/remotexy3.png" width="850">
+
+    Anschließend, klicke den Joystick in der GUI an und rechts bei `Properties` bei `Element` wirst du sehen, dass er nun `joystick_1` heißt. 
+  
+    In dieser Übersicht weiter unten, setze einen Haken bei `automatically center`.
+
+    <img src="doc/remotexy4.png" width="850">
+
+4. Bleibe rechts und öffne den Punkt `Module Interface`. 
+
+    Ändere nun den Namen deines Autos bei `Bluetooth name`:
+
+    <img src="doc/remotexy5.png">
+
+5. Jetzt können wir mit `Get Code` den Quellcode holen. Er wird unten dargestellt. 
+
+    Wir können im offenen Arduino Studio den Text einfach in eine neue Datei kopieren.
+
+    <img src="doc/remotexy6.png" width="850">
+
+    <img src="doc/remotexy7.png" width="850">
 
 ### Steuercode für unser Auto
 
@@ -215,5 +221,5 @@ Die Steuerung öffnet sich dann und es heißt. `Gentlegirls, please start your e
 
 ## Fehlersuche
 
-* Auch ohne angeschlossenen Motor kann man den Serial Plotter `Tools->Serial Plotter` nutzen. Er zeigt X/Y, Geschwindigkeit und Lenkung grafisch dar.
+* Auch ohne angeschlossenen Motor kann man den Serial Plotter `Tools > Serial Plotter` nutzen. Er zeigt X/Y, Geschwindigkeit und Lenkung grafisch dar.
 * Sollte die Bluetooth Verbindung abbrechen und nicht mehr hergestellt werden können hilft das Bluetooth kurz abschalten und wieder einschalten. 
