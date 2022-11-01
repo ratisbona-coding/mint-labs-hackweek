@@ -16,24 +16,33 @@ Hier findet ihr die Beschreibung, wie ihr eure Entwicklungsumgebung aufsetzen m�
 
 Hier herunterladen https://downloads.arduino.cc/arduino-1.8.19-windows.exe und installieren.
 
-### ESP32 Board
+#### ESP32 Board
 
 Dann müssen wir die board library für das ESP32 board installieren:
 
 * `File > Preferences > Additional Board Manager Urls`: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json eintragen
 * `Tools > Board > Board Manager` suchen nach ESP32 und installieren
 
-### ESPServo Bibliothek
+#### ESPServo Bibliothek
 
 * `Sketch > Include Library > Manage Libraries` suche nach `esp32Servo` und dann installieren (nicht esp32servo360).
 
     <img src="doc/esp32servo.png" width="750">
 
+#### Board einrichten
+
+* `Tools > Board > Esp32 Arduino` und wählt dort `DOIT ESP32 DEVKIT` aus.
+
 ## Hardware-Setup & Schema
+
+Wir verwenden den L298N Motortreiber für zwei Dinge.
+
+1. Er kann den Motor links und rechts herum drehen lassen
+2. Der Pin `5V` liefert uns 5V aus der Batterie die wir brauchen um den ESP32 mit Strom zu versorgen.
 
 | L298N Motor Driver  | ESP32 | Funktion |
 | ------------- | ------------- | ------------- |
-| 5 v   | VIN	| Spannungsversorgung (+) |
+| 5V   | VIN	| Spannungsversorgung (+) |
 | ENA	| D12	| Geschwindingkeit |
 | IN1	| D32	| Drehrichtung 1 |
 | IN2	| D33	| Drehrichtung 2 |
