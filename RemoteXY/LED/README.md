@@ -40,7 +40,7 @@ Dann baut auf dem Breadboard eine Schaltung nach dieser Vorlage auf:
 
     <img src="doc/remotexy2.png" width="850">
 
-4. Gib dem Button den Namen `licht_1`
+4. Gib dem Button den Namen `licht_1` und wähle unter `Snap to PIN` den Pin 26 aus.
 
     <img src="doc/remotexy3.png" width="850">
 
