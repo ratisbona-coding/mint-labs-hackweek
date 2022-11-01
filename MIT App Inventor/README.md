@@ -1,8 +1,10 @@
-## MIT App Inventor
+# MIT App Inventor
 
 `MIT App Inventor` ist eine intuitive, visuelle Programmierumgebung, die es jedem ermöglicht, voll funktionsfähige Apps für Android Smartphones oder Tablets in weniger als 30 Minuten zu erstellen. Wir haben das Tool verwendet, um das Auto über ein Tablet zu steuern.
 
-Im Unterordner `appfiles` findet ihr aktuell 3 Dateien: `slider1.aia`, `slider2.aia` and `hack-week-car.aia`. Dabei sind `slider1.aia` und `slider2.aia` für die Multi-Touch-Slider für die Geschwindigkeits- und Lenksteuerung.
+## MIT App Inventor Code
+
+Im Unterordner `appfiles` findet ihr aktuell 2 Dateien: `hack-week-car.aia`, `hack-week-car-alternative.aia`. `hack-week-car.aia` enthält code für eine Multi-Touch Steuerung für die Geschwindigkeit und Lenkung und ist ein guter Startpunkt.
 
 1. Gehe zum MIT App Inventor über diesen [Link](http://code.appinventor.mit.edu/), damit du kein Konto anlegen musst.
 
@@ -29,3 +31,7 @@ Im Unterordner `appfiles` findet ihr aktuell 3 Dateien: `slider1.aia`, `slider2.
 5. Wenn du dich abmeldest und am nächsten Tag weiterarbeiten willst, gebe den ursprünglichen Rückgabecode ein, um dich erneut anzumelden:
 
     ![App Inventor](doc/AppInventor-6.png "App Inventor")
+
+## Microcontroller Code
+
+Im Verzeichnis `arduino\hack-week-car` findet ihr den Quellcode welcher die Nachrichten vom App-Inventor erhält und in die Steuerung umsetzt.

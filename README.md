@@ -54,7 +54,7 @@ Wir verwenden den L298N Motortreiber für zwei Dinge.
 | Rot	| VIN	| Spannungsversorgung (+) |
 | Gelb	| D12	| Lenkeinschlag |
 
-![Schematic](doc/schematic.png "Schematic")
+![Schematic](doc/schematic.jpeg "Schematic")
 
 ## Appendix
 
