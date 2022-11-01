@@ -304,7 +304,7 @@ void calcURLs() {
         sprintf(streamURL, "http://%s:%d/", URL_HOSTNAME, streamPort);
     #else
         Serial.println("Setting httpURL");
-        if (httpPort != 80) {
+        if (httpPort != 80) { 
             sprintf(httpURL, "http://%d.%d.%d.%d:%d/", ip[0], ip[1], ip[2], ip[3], httpPort);
         } else {
             sprintf(httpURL, "http://%d.%d.%d.%d/", ip[0], ip[1], ip[2], ip[3]);
@@ -497,7 +497,7 @@ void WifiSetup() {
                         if (thisRSSI > bestRSSI) {
                             bestStation = sta;
                             strncpy(bestSSID, thisSSID.c_str(), 64);
-                            // Convert char bssid[] to a byte array
+                            // Convert char b           [] to a byte array
                             parseBytes(thisBSSID.c_str(), ':', bestBSSID, 6, 16);
                             bestRSSI = thisRSSI;
                         }
