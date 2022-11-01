@@ -108,14 +108,6 @@ void drive(int8_t x, int8_t y) {
   // wir mappen auf 10° bis 170° weil der Servo sonst am Gehäuse anschlägt
   int lenkung = map(x, -100, 100, 10, 170); 
   lenkungsServo.write(lenkung);
-
-  Serial.print(x);
-  Serial.print(",");
-  Serial.print(y);
-  Serial.print(",");
-  Serial.print(geschwindigkeit);
-  Serial.print(",");
-  Serial.print(lenkung);
 }
 
 void setup() 
